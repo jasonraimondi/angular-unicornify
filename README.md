@@ -1,6 +1,6 @@
 # 🦄 `angular-unicornify`
 
-Angular ready directives and a service for unicornifying your site. The two directives included are `unicornify-me` and `unicornify-clear` and the service is injectable as `UnicornifyService`.
+Easily add 🦄's to your Angular site. Includes two directives and a service for unicornifying your site. The two directives included are `unicornify-me` and `unicornify-clear` and the service is injectable as `UnicornifyService`.
 
 ## Usage
 
@@ -29,7 +29,7 @@ export class AppComponent {
 }
 ```
 
-```angular2html
+```html
 <div class="cornify">
   <span class="corns" unicornify-me>🦄</span>
   <span class="corns-clear" unicornify-clear>🗑️</span>
@@ -38,6 +38,17 @@ export class AppComponent {
 ```
 
 ## Reference
+
+### Use the `unicornify-me` and `unicornify-clear` Directives
+
+The directives are available for use on any element. Spawn unicorns by clicking the element.
+
+```
+<button unicornify-me>Click for corns</button>
+<button unicornify-clear>Click to clear corns</button>
+```
+
+### Use the `UnicornifyService`
 
 ```ts
 export class AppComponent {
