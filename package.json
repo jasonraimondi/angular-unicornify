@@ -19,7 +19,6 @@
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -44,6 +43,10 @@
       "limit": "10 KB"
     }
   ],
+  "peerDependencies": {
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0"
+  },
   "devDependencies": {
     "@angular/common": "^11.2.4",
     "@angular/core": "^11.2.4",
