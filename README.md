@@ -56,4 +56,5 @@ export class AppComponent {
 Big thanks to:
 
 [__Unicorns & Rainbows On-Demand__](http://www.cornify.com)
+
 [__use-cornify__](https://github.com/daphnesmit/use-cornify)
