@@ -43,7 +43,7 @@ export class AppComponent {
 
 The directives are available for use on any element. Spawn unicorns by clicking the element.
 
-```
+```html
 <button unicornify-me>Click for corns</button>
 <button unicornify-clear>Click to clear corns</button>
 ```
