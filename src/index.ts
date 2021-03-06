@@ -1,6 +1,4 @@
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('boop');
-  }
-  return a + b;
-};
+export * from './unicorns/unicornify.module';
+export * from './unicorns/unicornify-me.directive';
+export * from './unicorns/unicornify-clear.directive';
+export * from './unicorns/unicornify.service';

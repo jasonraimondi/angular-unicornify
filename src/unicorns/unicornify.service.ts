@@ -9,9 +9,9 @@ interface CornifyOptions {
   addCupcakeButton?: boolean
 }
 
-export class Cornify {
+export class UnicornifyService {
   private options: CornifyOptions = {}
-  private count: number = 0
+  private _count: number = 0
   private magicalWords: string[] = [
     'Happy',
     'Sparkly',
@@ -33,6 +33,11 @@ export class Cornify {
     this.initCounter()
   }
 
+  // @ts-ignore
+  get count(): number {
+    return this._count
+  }
+
   public start() {
     // Bind keydown event to add unicorns
     this.bindEvents()
@@ -45,9 +50,9 @@ export class Cornify {
   }
 
   private initCounter() {
-    this.count = parseInt(this.getCookie('cornify'))
-    if (isNaN(this.count)) {
-      this.count = 0
+    this._count = parseInt(this.getCookie('cornify'))
+    if (isNaN(this._count)) {
+      this._count = 0
     }
   }
 
@@ -111,11 +116,11 @@ export class Cornify {
 
   public add() {
     // Track how often we cornified.
-    this.count += 1
+    this._count += 1
 
     // Prepare our lovely variables.
     const cornify_url = 'https://www.cornify.com/'
-    const showGrandUnicorn = this.count === 15
+    const showGrandUnicorn = this._count === 15
     let transform = 'translate(-50%, -50%)'
 
     // Create a container for our 'corn or 'bow.
@@ -173,7 +178,7 @@ export class Cornify {
     // When clicking more than 5 times:
     // - add a custom stylesheet to make the page look awesome (when not already there)
     // - add magical word when addMagicalWords option is true
-    if (this.count > 5) {
+    if (this._count > 5) {
       this.addCornifyCss()
       if (this.options.addMagicalWords) this.addMagicalWords()
     }
@@ -219,14 +224,14 @@ export class Cornify {
     }
 
     // Set content of counter
-    if (this.count === 1) {
+    if (this._count === 1) {
       p.innerHTML = 'You cornified!'
     } else {
-      p.innerHTML = `You cornified ${this.count} times!`
+      p.innerHTML = `You cornified ${this._count} times!`
     }
 
     // Stores our count in a cookie for our next session.
-    this.setCookie('cornify', `${this.count}`, 1000)
+    this.setCookie('cornify', `${this._count}`, 1000)
   }
 
   private setCookie(name: string, value: string, days: number) {
@@ -270,6 +275,8 @@ export class Cornify {
 
     // remove event listeners
     this.removeEvents()
+
+    this._count = 0;
   }
 
   private removeAllUnicorns() {
