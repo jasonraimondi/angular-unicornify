@@ -5,14 +5,8 @@ import { AppComponent } from './app.component';
 import { UnicornifyModule } from "../../../src";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    UnicornifyModule,
-  ],
-  providers: [],
+  declarations: [AppComponent],
+  imports: [BrowserModule, UnicornifyModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
