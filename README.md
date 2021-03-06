@@ -30,6 +30,7 @@ export class AppComponent {
 ```
 
 ```html
+/* ./app.component.html */
 <div class="cornify">
   <span class="corns" unicornify-me>🦄</span>
   <span class="corns-clear" unicornify-clear>🗑️</span>
