@@ -2,6 +2,12 @@
 
 Easily add 🦄's to your Angular site. Includes two directives and a service for unicornifying your site. The two directives included are `unicornify-me` and `unicornify-clear` and the service is injectable as `UnicornifyService`.
 
+## Installation
+
+```bash
+npm install --save angular-unicornify
+```
+
 ## Usage
 
 ```typescript
