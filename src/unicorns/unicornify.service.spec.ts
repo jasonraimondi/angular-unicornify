@@ -1,4 +1,4 @@
-import { UnicornifyService } from "./unicornify.service";
+import { UnicornifyService } from './unicornify.service';
 
 describe('UnicornifyService', () => {
   let service: UnicornifyService;
