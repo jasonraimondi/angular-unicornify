@@ -1,5 +1,7 @@
 # 🦄 `angular-unicornify`
 
+[![CI](https://github.com/jasonraimondi/angular-unicornify/actions/workflows/main.yml/badge.svg)](https://github.com/jasonraimondi/angular-unicornify/actions/workflows/main.yml)
+
 Easily add 🦄's to your Angular site. Includes two directives and a service for unicornifying your site. The two directives included are `unicornify-me` and `unicornify-clear` and the service is injectable as `UnicornifyService`.
 
 ## Installation
