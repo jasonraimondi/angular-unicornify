@@ -31,7 +31,7 @@ export class UnicornifyService {
     this.options = options;
 
     // Retrieve our click count from the cookie when we start up.
-    this.initCounter();
+    this._count = 0;
   }
 
   // @ts-ignore
@@ -48,13 +48,6 @@ export class UnicornifyService {
 
     // Add a unicorn
     this.add();
-  }
-
-  private initCounter() {
-    this._count = parseInt(this.getCookie('cornify'));
-    if (isNaN(this._count)) {
-      this._count = 0;
-    }
   }
 
   private bindEvents() {
@@ -241,19 +234,6 @@ export class UnicornifyService {
     d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
     const expires = `expires=${d.toUTCString()}`;
     document.cookie = `${name}=${value}; ${expires}`;
-  }
-
-  private getCookie(cname: string) {
-    if (typeof window === 'undefined') return '';
-    const name = `${cname}=`;
-    const cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      const c = cookies[i].trim();
-      if (c.indexOf(name) === 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return '';
   }
 
   // Clicking the rainbow cupcake button makes all the unicorns
